@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="card">
+    <f:link.action pageUid="55" action="show" arguments="{car:car}">
+        <div class="carContainer">
+            <div class="carContainerImageContainer">
+                <f:render section="image" arguments="{image:car.teaserImage}"/>
+            </div>
+            <div class="carContainerText">
+                <h3 class="title">
+                    <f:if condition="{car.brand.title}">
+                        {car.brand.title}
+                    </f:if>
+                    <f:if condition="{car.model}">
+                        {car.model}
+                    </f:if>
+                    <f:if condition="{car.variant}">
+                        {car.variant}
+                    </f:if>
+                </h3>
+                <p class="firstLine">
+                    <f:if condition="{car.fuel}">
+                        {car.fuel},
+                    </f:if>
+
+                    <f:if condition="{car.propulsion}">
+                        {car.propulsion}
+                    </f:if>
+                </p>
+
+                <div class="secondLine">
+                    <f:if condition="{car.constructionYear}">
+                        <p class="year"><span class="secondLineFacts">{car.constructionYear -> f:format.nl2br()}</span> EZ</p>
+                    </f:if>
+                    <f:if condition="{car.kilometre}">
+                        <p class="kilometre"><span class="secondLineFacts"><f:format.number thousandsSeparator="." decimals="0">{car.kilometre -> f:format.nl2br()}</f:format.number></span> km</p>
+                    </f:if>
+                    <f:if condition="{car.horsepower}">
+                        <f:variable name="kw" value="{car.horsepower}"></f:variable>
+                        <p class="power"><span class="secondLineFacts">{car.horsepower -> f:format.nl2br()}</span> PS (<f:format.number thousandsSeparator="." decimals="0">{kw / 1.35962}</f:format.number> kW)</p>
+                    </f:if>
+                </div>
+
+                <div class="secondLineResponsive">
+                    <f:if condition="{car.constructionYear}">
+                        <p class="secondLineFacts">{car.constructionYear -> f:format.nl2br()}</p>
+                    </f:if>
+                    <f:if condition="{car.kilometre}">
+                        <p class="secondLineFacts"><f:format.number thousandsSeparator="." decimals="0">{car.kilometre -> f:format.nl2br()}</f:format.number> km</p>
+                    </f:if>
+                </div>
+
+                <div class="thirdLine">
+                    <f:if condition="{car.owner.name}">
+                        <p class="thirdLineOwner">{car.owner.name -> f:format.nl2br()}</p>
+                    </f:if>
+                    <f:if condition="{car.price}">
+                        <p class="thirdLinePrice"><f:format.currency currencySign="€" decimals="0">{car.price}</f:format.currency></p>
+                    </f:if>
+                </div>
+
+            </div>
+        </div>
+    </f:link.action>
+</f:section>
+
+<f:section name="image">
+    <f:if condition="{image}">
+        <f:then>
+            <f:image image="{image}" class="carContainerImage"/>
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.displayDummyIfNoMedia}">
+                <f:image class="carContainerImage" src="{settings.list.dummyImage}" title="" alt=""/>
+            </f:if>
+        </f:else>
+    </f:if>
+</f:section>

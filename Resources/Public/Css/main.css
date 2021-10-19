@@ -1,0 +1,407 @@
+.tx-cars *{
+    color: black;
+}
+
+.tx-cars *:hover{
+    text-decoration: none;
+}
+
+.tx-cars > h1{
+    margin-bottom: 18px;
+}
+
+
+.tx-cars .carContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    height: 218px;
+}
+
+.tx-cars .carContainer:hover {
+    background-color: #eaeaea;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+
+.tx-cars .carContainerText{
+    margin-left: 20px;
+}
+
+.tx-cars .title{
+    margin-bottom: 5px;
+}
+
+.tx-cars .firstLine{
+    font-size: 14px;
+    color: grey;
+}
+
+.tx-cars .secondLineResponsive {
+    display: none;
+}
+
+.tx-cars .secondLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.tx-cars .secondLine p {
+    margin-right: 30px;
+}
+
+.tx-cars .secondLine .secondLineFacts{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tx-cars .thirdLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tx-cars .thirdLine p {
+    margin-bottom: 0;
+}
+
+.tx-cars .thirdLine .thirdLineOwner{
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.tx-cars .thirdLine .thirdLinePrice {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* div */
+.tx-cars .carContainerImageContainer{
+    width: auto;
+    height: 177px;
+}
+
+/* img */
+.tx-cars .carContainerImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* gallery */
+.tx-cars #carouselExampleIndicators{
+    width: 60%;
+}
+
+.tx-cars .carousel-caption{
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.tx-cars .carousel-caption p{
+    color: white;
+    margin-bottom: 0;
+}
+
+.tx-cars .carousel-caption .wrap{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.tx-cars .carousel-inner{
+    object-fit: cover;
+}
+
+.tx-cars .d-block{
+    height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tx-cars .carousel-item{
+    object-fit: cover;
+}
+
+.tx-cars .carousel-control-next-icon{
+    color: white;
+}
+
+.tx-cars .carousel-control-prev, .tx-cars .carousel-control-next{
+    padding: 4px 8px;
+    background-color: rgba(0,0,0,0.4);
+    width: 30px;
+    height: 40px;
+    margin: auto 20px;
+}
+
+.tx-cars h2{
+    margin-bottom: 18px;
+}
+
+.tx-cars .showFirstRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.tx-cars .brandStats{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 30%;
+}
+
+.tx-cars .brandStats h4{
+    margin-bottom: 24px;
+}
+
+.tx-cars .brandStats .brandTitle{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.tx-cars .brandStats .brandDescription{
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 34px;
+}
+
+.tx-cars .brandStats img{
+    margin: 10px auto;
+}
+
+.tx-cars .brandStats .imgFlag, .tx-cars .brandStats .imgDummy{
+    margin: 0 0 0 6px;
+}
+
+.tx-cars .brandStats .brandCountry{
+    text-align: center;
+    font-size: 14px;
+}
+
+.tx-cars .showStats h4, .tx-cars .showDescription h4, .tx-cars .showOwner h4{
+    margin-top: 54px;
+    margin-bottom: 18px;
+}
+
+.tx-cars .showStats h6{
+    font-weight: bold;
+}
+
+.tx-cars .showStats{
+    width: 85%;
+}
+
+.tx-cars .showStats .firstColumn, .tx-cars .showStats .secondColumn{
+    column-count: 2;
+    column-gap: 30%;
+    margin-bottom: 18px;
+}
+
+.tx-cars .showStats .firstColumn p, .tx-cars .showStats .secondColumn p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.tx-cars .showStats .firstColumn .infoName, .tx-cars .showStats .secondColumn .infoName{
+    color: #6d6d6d;
+}
+
+.tx-cars .showStats .firstColumn .info, .tx-cars .showStats .secondColumn .info{
+    font-weight: bold;
+}
+
+.tx-cars .showDescription p{
+    color: #6d6d6d;
+}
+
+.tx-cars .showOwner .ownerData{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 85%;
+}
+
+.tx-cars .showOwner .ownerName{
+    margin-bottom: 0;
+}
+
+.tx-cars .showOwner .ownerEmail{
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.tx-cars .showOwner .ownerPhone{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.tx-cars .showOwner iframe{
+    width: 60%;
+    height: 250px;
+}
+
+.tx-cars .responsiveLine {
+    display: none;
+}
+
+.tx-cars .noResponsiveLine{
+    display: block;
+}
+
+@media (max-width: 1620px) {
+    .tx-cars .showStats .firstColumn, .tx-cars .showStats .secondColumn{
+        column-count: 1;
+    }
+
+    .tx-cars .showStats{
+        width: 60%;
+    }
+
+    .tx-cars .showOwner .ownerData{
+        width: 95%;
+    }
+}
+
+@media (max-width: 736px) {
+    .tx-cars .power, .tx-cars .thirdLineOwner, .tx-cars .firstLine {
+        display: none;
+    }
+
+    .tx-cars .carContainer{
+        padding: 20px 5px;
+        height: auto;
+    }
+
+    .tx-cars .carContainerImageContainer {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tx-cars .title {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .tx-cars .secondLine {
+        display: none;
+    }
+
+    .tx-cars .secondLineResponsive {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-bottom: 12px;
+    }
+
+    .tx-cars .secondLineResponsive p {
+        margin-right: 15px;
+    }
+
+    .tx-cars .secondLineResponsive .secondLineFacts{
+        font-weight: bolder;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .tx-cars .thirdLine .thirdLinePrice{
+        font-size: 16px;
+
+    }
+
+    .tx-cars .carContainerText .thirdLine{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .tx-cars .showFirstRow{
+        flex-direction: column;
+    }
+
+    .tx-cars #carouselExampleIndicators{
+        width: 100%;
+    }
+
+    .tx-cars .d-block{
+        height: 200px;
+    }
+
+    .tx-cars .brandStats{
+        max-width: 90%;
+        margin-bottom: 54px;
+    }
+
+    .tx-cars .brandStats .brandCountry{
+        margin-bottom: 0;
+    }
+
+    .tx-cars .brandStats h4, .tx-cars .showStats h4{
+        margin-top: 54px;
+    }
+
+    .tx-cars .responsiveLine{
+        margin: 0;
+        display: block;
+    }
+
+    .tx-cars .showStats h4{
+        margin-bottom: 18px;
+    }
+
+    .tx-cars .showStats .firstColumn, .tx-cars .showStats .secondColumn{
+        column-count: 1;
+    }
+
+    .tx-cars .showStats .firstColumn p, .tx-cars .showStats .secondColumn p{
+        font-size: 12px;
+    }
+
+    .tx-cars .showStats{
+        width: 100%;
+    }
+
+    .tx-cars .showDescription p{
+        font-size: 12px;
+    }
+
+    .tx-cars .showOwner .ownerData{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tx-cars .showOwner .ownerData .ownerDetail p{
+        font-size: 12px;
+    }
+
+    .tx-cars .showOwner .ownerEmail {
+        margin-bottom: 0;
+    }
+
+    .tx-cars .showOwner iframe{
+        margin-top: 20px;
+        width: 100%;
+        height: 190px;
+    }
+
+    .tx-cars .noResponsiveLine {
+        display: none;
+    }
+
+}
+
+
+

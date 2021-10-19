@@ -1,0 +1,271 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+<f:section name="content">
+    <h2>
+        <f:if condition="{car.brand.title}">
+            {car.brand.title}
+        </f:if>
+        <f:if condition="{car.model}">
+            {car.model}
+        </f:if>
+        <f:if condition="{car.variant}">
+            {car.variant}
+        </f:if>
+    </h2>
+
+    <div class="showFirstRow">
+        <f:render section="gallery" arguments="{_all}" />
+        <f:render section="brandStats" arguments="{_all}" />
+    </div>
+
+    <div class="showStats">
+        <f:render section="stats" arguments="{_all}" />
+    </div>
+
+    <div class="showDescription">
+        <f:render section="descriptionInfo" arguments="{_all}" />
+    </div>
+
+    <div class="showOwner">
+        <f:render section="ownerInfo" arguments="{_all}" />
+    </div>
+
+</f:section>
+
+
+<f:section name="gallery">
+    <f:if condition="{car.gallery}">
+
+        <f:variable name="first" value="one"></f:variable>
+        <f:variable name="firstNew" value="one"></f:variable>
+        {f:variable(name: 'counter', value: 1)}
+        {f:variable(name: 'counterNew', value: 1)}
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <f:for each="{car.gallery}" as="media">
+                    <f:if condition="{firstNew} == 'one'">
+                        <f:then>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{counterNew-1}" class="active"></li>
+                            {f:variable(name: 'counterNew', value: '{counterNew + 1}')}
+                            {f:variable(name: 'firstNew', value: 'notOne')}
+                        </f:then>
+                        <f:else>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{counterNew-1}"></li>
+                            {f:variable(name: 'counterNew', value: '{counterNew + 1}')}
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </ol>
+            <div class="carousel-inner">
+                <f:for each="{car.gallery}" as="media">
+                    <f:if condition="{first} == 'one'">
+                        <f:then>
+                            <div class="carousel-item active">
+                                <f:image class="d-block" image="{media}" height="400"/>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="wrap"><p>{counter} of {car.gallery -> f:count()}</p></div>
+                                </div>
+                            </div>
+                            {f:variable(name: 'counter', value: '{counter + 1}')}
+
+                            <f:variable name="first" value="more"></f:variable>
+                        </f:then>
+                        <f:else>
+                            <div class="carousel-item">
+                                <f:image class="d-block" image="{media}" height="400"/>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="wrap"><p>{counter} of {car.gallery -> f:count()}</p></div>
+                                </div>
+                            </div>
+                            {f:variable(name: 'counter', value: '{counter + 1}')}
+
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </f:if>
+</f:section>
+
+
+<f:section name="brandStats">
+    <div class="brandStats">
+        <f:if condition="{car.gallery}">
+            <h4>About the Brand</h4>
+            <f:if condition="{car.brand}">
+                <f:render section="imageLogo" arguments="{imageLogo:car.brand.logo}"/>
+            </f:if>
+            <f:if condition="{car.brand.title}">
+                <p class="brandTitle">{car.brand.title -> f:format.nl2br()}</p>
+            </f:if>
+            <f:if condition="{car.brand.description}">
+                <p class="brandDescription">"{car.brand.description -> f:format.nl2br()}"</p>
+            </f:if>
+            <f:if condition="{car.brand.title} && {car.brand.country.title}">
+                <p class="brandCountry">
+                    {car.brand.title} is a brand from <br> {car.brand.country.title -> f:format.nl2br()}
+                    <f:render section="imageFlag" arguments="{imageFlag:car.brand.country.flag}"/>
+                </p>
+            </f:if>
+        </f:if>
+    </div>
+    <hr class="responsiveLine">
+</f:section>
+
+<f:section name="imageLogo">
+    <f:if condition="{imageLogo}">
+        <f:then>
+            <f:image image="{imageLogo}"
+                     height="{f:if(condition:settings.show.image.logo.height, then:settings.show.image.logo.height,else:70)}"
+            />
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.displayDummyLogoIfNoMedia}">
+                <f:image class="img-dummy img-responsive" src="{settings.show.dummyImageLogo}" title="" alt="" height="{settings.show.image.logo.height}" />
+            </f:if>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="imageFlag">
+    <f:if condition="{imageFlag}">
+        <f:then>
+            <f:image class="imgFlag" image="{imageFlag}"
+                     height="{f:if(condition:settings.show.image.flag.height, then:settings.show.image.flag.height,else:20)}"
+            />
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.displayDummyFlagIfNoMedia}">
+                <f:image class="imgDummy img-dummy img-responsive" src="{settings.show.dummyImageFlag}" title="" alt="" height="{settings.show.image.flag.height}" />
+            </f:if>
+        </f:else>
+    </f:if>
+</f:section>
+
+
+<f:section name="stats">
+    <h4>Data of the Car</h4>
+
+    <h6>General</h6>
+        <div class="firstColumn">
+            <f:if condition="{car.model}">
+                <p>
+                    <span class="infoName">Model: </span>
+                    <span class="info"> {car.model -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.variant}">
+                <p>
+                    <span class="infoName">Variant: </span>
+                    <span class="info"> {car.variant -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.type}">
+                <p>
+                    <span class="infoName">Type: </span>
+                    <span class="info">{car.type -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.constructionYear}">
+                <p>
+                    <span class="infoName">Construction Year: </span>
+                    <span class="info">{car.constructionYear -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.price}">
+                <p>
+                    <span class="infoName">Price: </span>
+                    <span class="info"><f:format.currency currencySign="€" decimals="0">{car.price}</f:format.currency></span>
+                </p>
+            </f:if>
+        </div>
+
+    <h6>Technic</h6>
+        <div class="secondColumn">
+            <f:if condition="{car.horsepower}">
+                <p>
+                    <span class="infoName">Power: </span>
+                    <f:variable name="kw" value="{car.horsepower}"></f:variable>
+                    <span class="info">{car.horsepower -> f:format.nl2br()} PS (<f:format.number thousandsSeparator="." decimals="0">{kw / 1.35962}</f:format.number> kW)</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.kilometre} || {car.kilometre} === 0">
+                <p>
+                    <span class="infoName">Kilometres: </span>
+                    <span class="info"><f:format.number thousandsSeparator="." decimals="0">{car.kilometre -> f:format.nl2br()}</f:format.number> km</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.fuel}">
+                <p>
+                    <span class="infoName">Fuel: </span>
+                    <span class="info">{car.fuel -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.propulsion}">
+                <p>
+                    <span class="infoName">Propulsion: </span>
+                    <span class="info">{car.propulsion -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+            <f:if condition="{car.transmission}">
+                <p>
+                    <span class="infoName">Transmission: </span>
+                    <span class="info">{car.transmission -> f:format.nl2br()}</span>
+                </p>
+            </f:if>
+        </div>
+</f:section>
+
+
+<f:section name="descriptionInfo">
+        <f:if condition="{car.description}">
+            <h4>Description</h4>
+            <f:format.html>{car.description}</f:format.html>
+        </f:if>
+</f:section>
+
+
+<f:section name="ownerInfo">
+    <h4>Owner</h4>
+    <div class="ownerData">
+        <div class="ownerDetail">
+                <f:if condition="{car.owner.name}">
+                    <p class="ownerName">{car.owner.name -> f:format.nl2br()}</p>
+                </f:if>
+                <f:if condition="{car.owner.address}">
+                    <p class="ownerAddress">{car.owner.address -> f:format.nl2br()}</p>
+                </f:if>
+            <hr class="noResponsiveLine">
+                <f:if condition="{car.owner.eMail}">
+                    <p class="ownerEmail">{car.owner.eMail -> f:format.nl2br()}</p>
+                </f:if>
+                <f:if condition="{car.owner.phoneNumber}">
+                    <p class="ownerPhone">{car.owner.phoneNumber -> f:format.nl2br()}</p>
+                </f:if>
+        </div>
+        <f:render section="mapInfo" arguments="{_all}" />
+    </div>
+</f:section>
+
+<f:section name="mapInfo">
+    <f:if condition="{car.owner.address}">
+        <iframe frameborder="0" style="border:0"  src="https://www.google.com/maps/embed/v1/place?key={googleMapsKey}&q={car.owner.address}"></iframe>
+    </f:if>
+</f:section>
+
+
+
+
+
+</html>

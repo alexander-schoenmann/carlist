@@ -1,0 +1,2 @@
+# cat=config/enable/101; type=string; label=My Google Maps Key:Enter the key from google
+googleMapsKey = ABCDEF

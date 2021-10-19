@@ -1,0 +1,110 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-cars" >
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.model" />
+		</td>
+		<td>
+		{car.model}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.variant" />
+		</td>
+		<td>
+		{car.variant}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.type" />
+		</td>
+		<td>
+		{car.type}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.construction_year" />
+		</td>
+		<td>
+		{car.constructionYear}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.horsepower" />
+		</td>
+		<td>
+		{car.horsepower}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.fuel" />
+		</td>
+		<td>
+		{car.fuel}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.kilometre" />
+		</td>
+		<td>
+		{car.kilometre}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.price" />
+		</td>
+		<td>
+		{car.price}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.description" />
+		</td>
+		<td>
+		{car.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.propulsion" />
+		</td>
+		<td>
+		{car.propulsion}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.transmission" />
+		</td>
+		<td>
+		{car.transmission}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.teaser_image" />
+		</td>
+		<td>
+				<f:image src="{car.teaserImage.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_cars_domain_model_car.gallery" />
+		</td>
+		<td>
+				<f:for each="{car.gallery}" as="image" >
+					<f:image src="{image.originalResource.publicUrl}" width="200"/>
+				</f:for>
+		</td>
+	</tr>
+</table>
+</html>

@@ -1,0 +1,66 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <settings.country>
+                        <TCEforms>
+                            <label>Country</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <foreign_table>tx_cars_domain_model_country</foreign_table>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.country>
+
+                    <settings.highlight>
+                        <TCEforms>
+                            <label>Highlight</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.highlight>
+
+                    <settings.image.width>
+                        <TCEforms>
+                            <label>Image Width</label>
+                            <config>
+                                <type>input</type>
+                                <size>2</size>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.image.width>
+
+                    <settings.detailPid>
+                        <TCEforms>
+                            <label>Detailseite</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.detailPid>
+                </el>
+            </ROOT>
+        </sDEF>
+
+    </sheets>
+</T3DataStructure>

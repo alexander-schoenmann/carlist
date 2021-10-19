@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cars/Resources/Private/Language/locallang_db" date="2021-07-18T10:50:53Z" product-name="cars">
+		<header/>
+		<body>
+			<trans-unit id="tx_cars_domain_model_country" resname="tx_cars_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_country.title" resname="tx_cars_domain_model_country.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_country.flag" resname="tx_cars_domain_model_country.flag">
+				<source>Flag</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_brand" resname="tx_cars_domain_model_brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_brand.title" resname="tx_cars_domain_model_brand.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_brand.description" resname="tx_cars_domain_model_brand.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_brand.logo" resname="tx_cars_domain_model_brand.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_brand.country" resname="tx_cars_domain_model_brand.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_owner" resname="tx_cars_domain_model_owner">
+				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_owner.name" resname="tx_cars_domain_model_owner.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_owner.e_mail" resname="tx_cars_domain_model_owner.e_mail">
+				<source>E Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_owner.phone_number" resname="tx_cars_domain_model_owner.phone_number">
+				<source>Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_owner.address" resname="tx_cars_domain_model_owner.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car" resname="tx_cars_domain_model_car">
+				<source>Car</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.model" resname="tx_cars_domain_model_car.model">
+				<source>Model</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.variant" resname="tx_cars_domain_model_car.variant">
+				<source>Variant</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.type" resname="tx_cars_domain_model_car.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.construction_year" resname="tx_cars_domain_model_car.construction_year">
+				<source>Construction Year</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.horsepower" resname="tx_cars_domain_model_car.horsepower">
+				<source>Horsepower</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.fuel" resname="tx_cars_domain_model_car.fuel">
+				<source>Fuel</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.kilometre" resname="tx_cars_domain_model_car.kilometre">
+				<source>Kilometre</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.price" resname="tx_cars_domain_model_car.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.description" resname="tx_cars_domain_model_car.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.propulsion" resname="tx_cars_domain_model_car.propulsion">
+				<source>Propulsion</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.transmission" resname="tx_cars_domain_model_car.transmission">
+				<source>Transmission</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.teaser_image" resname="tx_cars_domain_model_car.teaser_image">
+				<source>Teaser Image</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.gallery" resname="tx_cars_domain_model_car.gallery">
+				<source>Gallery</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.brand" resname="tx_cars_domain_model_car.brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_domain_model_car.owner" resname="tx_cars_domain_model_car.owner">
+				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_car.name" resname="tx_cars_car.name">
+				<source>Car List</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_car.description" resname="tx_cars_car.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_cars_germany.name" resname="tx_cars_germany.name">
+				<source>Car List Germany</source>
+			</trans-unit>
+			<trans-unit id="tx_cars_germany.description" resname="tx_cars_germany.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

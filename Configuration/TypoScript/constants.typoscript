@@ -1,0 +1,28 @@
+plugin.tx_cars_car {
+    view {
+        # cat=plugin.tx_cars_car/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:cars/Resources/Private/Templates/
+        # cat=plugin.tx_cars_car/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:cars/Resources/Private/Partials/
+        # cat=plugin.tx_cars_car/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:cars/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_cars_car//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_cars_germany {
+    view {
+        # cat=plugin.tx_cars_germany/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:cars/Resources/Private/Templates/
+        # cat=plugin.tx_cars_germany/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:cars/Resources/Private/Partials/
+        # cat=plugin.tx_cars_germany/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:cars/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_cars_germany//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

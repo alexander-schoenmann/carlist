@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cars/Resources/Private/Language/locallang_csh" date="2021-07-18T10:50:53Z" product-name="cars">
+		<header/>
+		<body>
+			<trans-unit id="model.description" resname="model.description">
+				<source>zB: A4</source>
+			</trans-unit>
+			<trans-unit id="variant.description" resname="variant.description">
+				<source>zB: B8</source>
+			</trans-unit>
+			<trans-unit id="type.description" resname="type.description">
+				<source>zB: Kombi</source>
+			</trans-unit>
+			<trans-unit id="construction_year.description" resname="construction_year.description">
+				<source>constructionYear</source>
+			</trans-unit>
+			<trans-unit id="horsepower.description" resname="horsepower.description">
+				<source>horsepower</source>
+			</trans-unit>
+			<trans-unit id="fuel.description" resname="fuel.description">
+				<source>fuel</source>
+			</trans-unit>
+			<trans-unit id="kilometre.description" resname="kilometre.description">
+				<source>kilometre</source>
+			</trans-unit>
+			<trans-unit id="price.description" resname="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="propulsion.description" resname="propulsion.description">
+				<source>zB: Vorderrad</source>
+			</trans-unit>
+			<trans-unit id="transmission.description" resname="transmission.description">
+				<source>zB: 6-Gang Schaltgetriebe</source>
+			</trans-unit>
+			<trans-unit id="teaser_image.description" resname="teaser_image.description">
+				<source>teaserImage</source>
+			</trans-unit>
+			<trans-unit id="gallery.description" resname="gallery.description">
+				<source>gallery</source>
+			</trans-unit>
+			<trans-unit id="brand.description" resname="brand.description">
+				<source>brand</source>
+			</trans-unit>
+			<trans-unit id="owner.description" resname="owner.description">
+				<source>owner</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
