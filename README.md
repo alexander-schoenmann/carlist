@@ -77,3 +77,6 @@ Pull Requests are gladly welcome! Nevertheless please don't forget to add an iss
 Bugfixes: Please describe what kind of bug your fix solve and give me feedback how to reproduce the issue. I'm going to accept only bugfixes if I can reproduce the issue.
 
 Features: Not every feature is relevant for the bulk of ```carlist``` users. In addition: I don't want to make ```carlist``` even more complicated in usability for an edge case feature. It helps to have a discussion about a new feature before you open a pull request.
+
+### 2.2 Contact
+If you have any questions regarding the project, please do not hesitate to contact me. I can be reached at alexander@schoenmann.co.at
