@@ -68,7 +68,7 @@ plugin.tx_cars{
 
 ### 1.3 Use the extension
 #### Create content
-Content can now be added. To do this, click on the "Cars" folder and add Brands, Cars, Countries and Owners. The individual contents are related to each other, so it makes sense to start with the owner or the country. 
+Content can now be added. To do this, click on the "Cars" folder and add Brands, Cars, Countries and Owners. The individual contents are related to each other, so it makes sense to start with the owner or the country.
 
 ## 2 Administration corner
 ### 2.1 Contribution
