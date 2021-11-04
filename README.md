@@ -5,18 +5,34 @@ A Typo3 extension for a secondhand car platform. The entire extension is respons
 ## 1 Usage
 ### 1.1 Installation
 #### Installation using zip file
-Download the project from the master branch and save the zip file on your local machine. Then go to your typo3 project and navigate to the extensions tab. After that you can upload the zip-file and install the extension.
+Download the project from the master branch and save the zip file on your local machine. 
 
 ### 1.2 First setup
 #### Create the necessary files and folders
+
+Bevor die Extension installiert wird, werden die Seiten angelegt, damit wir die PageUID der Detailseite kennen und im Programmcode ändern können.
+
 Before the extension can be used, some preparations have to be made. 
 A new standard page must be created in the directory tree. Let's call it "CarList". Two more standard pages must be created below it. The first one we call "Detail", the second one "CarList Germany".
 At the same level as the CarList page, a folder must now be created, let's call it "Cars".
 
+Die Seite Detail kann für das Menü ausgeblendet werden, da später ein Klick auf das entsprechende Listenelement in der CarList oder CarListGermany Ansicht auf die jeweilige Unterseite verweist (sieht je nach ausgewähltem Auto anders aus). Dafür Rechtsklick im PageTree auf die Seite Detail > More options... > Hide in menu. Die Seite ist dann nicht mehr im Menü der Webseite zu sehen, aber immer noch aufrufbar.
+
+Der ZipFolder wird entpackt, die Datei ListView.html wird geöffnet (liegt unter Resources/Private/Partials) und in Zeile 4 die Zahl hinter pageUid="XX" wird auf die SeitenPageID der Detailseite gesetzt. Dann speichern und das Projekt wieder zippen.
+
+Then go to your typo3 project and navigate to the extensions tab. After that you can upload the zip-file and install the extension.
+
 #### Add plugins to the pages
+
+Klick auf einzelnen Seiten mittels Page im Tree
+
 Then several plugins must be added to the newly created pages.
 - Add the plugin ```Car List``` to the "CarList" and "Detail" pages.
 - Add the plugin ```Car List Germany``` to the "CarList Germany" page.
+
+Beim Hinzufügen der einzelnen Plugins muss noch etwas eingestellt werden:
+Für CarList und Detail: im Reiter Plugin muss das CarList Plugin ausgewählt sein, unter Record Storage Page der Cars Folder (in diesem Ordner werden die eigentlichen Daten gespeichert).
+Für CarListGermany: im Reiter Plugin muss das CarListGermany Plugin ausgewählt sein, unter Record Storage Page wieder der Cars Folder. Die Eingabe Felder bei den Plugin Options bleiben leer.
 
 #### Create a template record
 In order to add further important settings, a template file must be created for the "CarList" page. 
@@ -68,6 +84,9 @@ plugin.tx_cars{
 
 ### 1.3 Use the extension
 #### Create content
+
+Klick auf Cars Folder mittels List im Tree
+
 Content can now be added. To do this, click on the "Cars" folder and add Brands, Cars, Countries and Owners. The individual contents are related to each other, so it makes sense to start with the owner or the country.
 
 ## 2 Administration corner
