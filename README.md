@@ -10,16 +10,16 @@ Download the project from the master branch and save the zip file on your local 
 #### Create the necessary files and folders
 Before the extension can be used, some preparations have to be made in typo3. 
 A new standard page must be created in the directory tree. Let's call it "CarList". Two more standard pages must be created below it. The first one we call "Detail", the second one "CarList Germany".
-At the same level as the CarList page, a folder must now be created, let's call it "Cars".
+At the same level as the "CarList" page, a folder must now be created, let's call it "Cars".
 
 #### Hide detail page
-Afterwards, the "Detail" page can be hidden for the menu. This means that the detail page can only be accessed by selecting the corresponding car from the list. To do this, right-click on the "Detail" page in the page tree and select "More options..." and "Hide in menu". 
+Afterwards, the "Detail" page can be hidden for the menu. This means that the "Detail" page can only be accessed by selecting the corresponding car from the list. To do this, right-click on the "Detail" page in the page tree and select "More options..." and "Hide in menu". 
 
 #### Change pageUid
-In order to address the correct detail page later, a small change has to be done. Search for the created page "Detail" in the page tree and move the mouse over the icon in front of it. An id will then be displayed (e.g. id=58). Navigate to the "project" folder and open the file ListView.html (project/Resources/Private/Partials/ListView.html). Change the pageUid (approx. line 4) to the id value of your detail page. Then save and close the file.
+In order to address the correct "Detail" page later, a small change has to be done. Search for the created "Detail" page in the page tree and move the mouse over the icon in front of it. An id will then be displayed (e.g. id=58). Navigate to the "project" folder in your explorer and open the file ListView.html (project/Resources/Private/Partials/ListView.html). Change the pageUid (approx. line 4) to the id value of your "Detail" page. Then save and close the file.
 
 ### 1.3 Installation
-Compress the "project" folder. Then go to your typo3 project and navigate to the extensions tab. After that you can upload the zip-file and install the extension. The extension was originally developed with Typo3 version 10.4.9.
+Compress the "project" folder. Then navigate to the extensions tab in typo3. After that you can upload the zip-file and install the extension. The extension was originally developed with Typo3 version 10.4.9.
 
 ### 1.4 Further adjustments
 #### Add plugins to the pages
@@ -30,8 +30,7 @@ Then several plugins must be added to the newly created pages. To do this, switc
 When adding each plugin, make sure that the corresponding plugin is also selected in the drop-down menu under the "Plugin" tab. In addition, the "Cars" folder must be specified in the "Record Storage Page" field below (for each added plugin).
 
 #### Create a template record
-In order to add further important settings, a template file must be created for the "CarList" page. 
-Copy the following code into the "Setup" field of the template:
+In order to add further important settings, a template file must be created for the "CarList" page. Select the "CarList" page and then switch to the "Extensions" tab in the module menu. Copy the following code into the "Setup" field of the template:
 ```
 page = PAGE
 page.config.contentObjectExceptionHandler = 0
@@ -83,7 +82,7 @@ Content can now be added. To do this, switch to the "List" tab in the module men
 
 #### Google Maps Key
 When creating an owner, the exact address can be entered, which is later displayed on a map. For this purpose, a so-called Google Maps API Key must be generated (see https://developers.google.com/maps/documentation/javascript/get-api-key).
-Then go to "Settings" > "Extension Configuration" in the module menu and select the extension. Enter the API key and save the configuration. The Google Maps map is now displayed.
+After you have received the key go to "Settings" > "Extension Configuration" in the module menu and select the extension. Enter the API key and save the configuration. The Google Maps map is now displayed.
 
 ## 2 Administration corner
 ### 2.1 Contribution
