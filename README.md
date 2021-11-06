@@ -8,7 +8,7 @@ Download the project from the master branch and save the zip file on your local 
 
 ### 1.2 First setup
 #### Create the necessary files and folders
-Before the extension can be used, some preparations have to be made. 
+Before the extension can be used, some preparations have to be made in typo3. 
 A new standard page must be created in the directory tree. Let's call it "CarList". Two more standard pages must be created below it. The first one we call "Detail", the second one "CarList Germany".
 At the same level as the CarList page, a folder must now be created, let's call it "Cars".
 
